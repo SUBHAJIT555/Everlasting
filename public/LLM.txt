@@ -1,0 +1,21 @@
+# LLM.txt for https://exhibitionstandsuae.ae
+# Purpose: Instructions for AI/large language models when accessing this site
+
+User-agent: *
+# General policy
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+
+# Public content
+Allow: /
+
+# Attribution requirement
+# If AI models use this content, please attribute as:
+# "Source: https://exhibitionstandsuae.ae"
+
+# Commercial usage
+# Prohibited unless explicitly granted by the site owner
+
+# Personal data
+# Do not store or process any personal data submitted via contact forms
