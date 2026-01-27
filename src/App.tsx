@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
-import { RouterProvider } from "react-router";
+import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/router";
 import { HelmetProvider } from "react-helmet-async";
 import { swrConfig } from "./lib/swrConfig";

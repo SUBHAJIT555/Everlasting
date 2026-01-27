@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 import { Logo } from "./index";
 import { useMobileMenuStore } from "../store/mobileMenuStore";
 import { useCallbackModalStore } from "../store/callbackModalStore";
