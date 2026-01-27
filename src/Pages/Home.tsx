@@ -1,8 +1,10 @@
-
+import Hero from "../components/ui/Hero";
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Hero />
+    </>
   )
 }
 

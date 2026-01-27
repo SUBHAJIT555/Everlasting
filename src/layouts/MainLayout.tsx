@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from "react-router";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Navbar from "@/components/ui/Navbar";
 import FloatingActions from "@/components/ui/FloatingActions";
 import LeadCaptureModalManager from "@/components/LeadCaptureModalManager";

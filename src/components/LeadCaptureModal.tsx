@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiX } from "@react-icons/all-files/fi/FiX";
 import { FiCheckCircle } from "@react-icons/all-files/fi/FiCheckCircle";
 import { cn } from "@/lib/utils";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { useUTMTracking } from "@/hooks/useUTMTracking";
 const PHONE_PREFIX = "+971";
 const PHONE_DIGITS_LENGTH = 9;
