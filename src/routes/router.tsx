@@ -2,9 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import Home from "../Pages/Home";
 import MainLayout from "../layouts/MainLayout";
+import About from "../Pages/About";
+import Service from "@/Pages/Service";
+import HvacElectrical from "@/components/Services/HvacElectrical";
+import PlumbingSanitary from "@/components/Services/PlumbingSanitary";
 
-const About = lazy(() => import("../Pages/About"));
-const Service = lazy(() => import("../Pages/Service"));
+
 const Contact = lazy(() => import('@/Pages/Contact'))
 
 
@@ -24,6 +27,14 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Service />,
+      },
+      {
+        path: "/services/hvac-electrical",
+        element: <HvacElectrical />,
+      },
+      {
+        path: "/services/plumbing-sanitary",
+        element: <PlumbingSanitary />,
       },
       {
         path: "/contact-us",
