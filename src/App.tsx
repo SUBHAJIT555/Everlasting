@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Cursor from "./components/ui/Cursor"
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/router";
 import { HelmetProvider } from "react-helmet-async";
 import { swrConfig } from "./lib/swrConfig";
 import { SWRConfig } from "swr";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 
 // Create a QueryClient instance
 const queryClient = new QueryClient({
@@ -40,6 +42,7 @@ function App() {
 
   return (
     <>
+      <Cursor />
       <QueryClientProvider client={queryClient}>
         <SWRConfig value={swrConfig}>
           <HelmetProvider>
