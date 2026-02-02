@@ -1,8 +1,11 @@
-
-
+import Services from "@/components/Services/Services"
 const Service = () => {
   return (
-    <div>Service</div>
+    <section className="relative w-full bg-neutral-100 ">
+      
+        <Services />
+    </section>
+
   )
 }
 
