@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Cursor from "./components/ui/Cursor"
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/router";
 import { HelmetProvider } from "react-helmet-async";
@@ -42,7 +41,6 @@ function App() {
 
   return (
     <>
-      <Cursor />
       <QueryClientProvider client={queryClient}>
         <SWRConfig value={swrConfig}>
           <HelmetProvider>

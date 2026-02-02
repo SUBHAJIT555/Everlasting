@@ -1,13 +1,19 @@
 import Hero from "@/components/Hero";
-import About from "./About";
-import Service from "./Service";
+import AboutHome from "@/components/AboutHome";
+import ServicesHome from "@/components/ServicesHome";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import FAQ from "@/components/FAQ";
+import CallToAction from "@/components/CallToAction";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <About />
-      <Service />
+      <AboutHome />
+      <ServicesHome />
+      <WhyChooseUs />
+      <FAQ />
+      <CallToAction />
     </>
   );
 }
