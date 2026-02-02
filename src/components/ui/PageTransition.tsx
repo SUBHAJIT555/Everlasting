@@ -19,7 +19,7 @@ export default function PageTransition({ active }: { active: boolean }) {
 
   return (
     <svg
-      className="fixed inset-0 z-[9999] pointer-events-none"
+      className="fixed inset-0 z-999 pointer-events-none"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >
