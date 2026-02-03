@@ -1,12 +1,17 @@
-import Services from "@/components/Services/Services"
+import ServiceHero from "@/components/ServiceHero";
+import ServicesVarity from "@/components/ServicesVarity";
+import Testimonials from "@/components/Testimonials";
+import CallToAction from "@/components/CallToAction";
+
 const Service = () => {
   return (
-    <section className="relative w-full bg-neutral-100 ">
-      
-        <Services />
-    </section>
+    <div>
+      <ServiceHero />
+      <ServicesVarity />
+      <Testimonials />
+      <CallToAction />
+    </div>
+  );
+};
 
-  )
-}
-
-export default Service
+export default Service;
