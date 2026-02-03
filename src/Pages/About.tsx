@@ -1,12 +1,18 @@
 import AboutCompany from "@/components/AboutCompany";
+import AboutHero from "@/components/AboutHero";
+import CoreValues from "@/components/CoreValues";
+import Testimonials from "@/components/Testimonials";
+import CallToAction from "@/components/CallToAction";
 
 const About = () => {
   return (
-    <div
-      id="about-section"
-      className="relative w-full overflow-hidden text-gray-900 bg-neutral-100"
-    >
+    <div>
+
+      <AboutHero />
       <AboutCompany />
+      <CoreValues />
+      <Testimonials />
+      <CallToAction />
     </div>
   );
 };

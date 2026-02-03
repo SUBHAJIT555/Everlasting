@@ -68,9 +68,9 @@ const FAQItem = ({
         >
             <button
                 onClick={onToggle}
-                className="w-full py-4 md:py-5 text-left flex items-center justify-between group cursor-pointer transition-colors duration-200 rounded-lg px-2 -mx-2"
+                className="w-full py-3 sm:py-4 md:py-5 text-left flex items-center justify-between group cursor-pointer transition-colors duration-200 rounded-lg px-2 -mx-2"
             >
-                <h4 className="text-base md:text-lg lg:text-xl font-semibold text-neutral-800 font-generalsans pr-4 group-hover:translate-x-2 transition-all duration-300 text-left">
+                <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-neutral-800 font-generalsans pr-4 group-hover:translate-x-2 transition-all duration-300 text-left">
                     {item.question}
                 </h4>
                 <motion.div
@@ -103,7 +103,7 @@ const FAQItem = ({
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <p className="text-sm md:text-base text-neutral-600 font-generalsans leading-relaxed pb-4 md:pb-5 px-2">
+                        <p className="text-sm sm:text-base md:text-base text-neutral-600 font-generalsans leading-relaxed pb-4 md:pb-5 px-2">
                             {item.answer}
                         </p>
                     </motion.div>
@@ -132,41 +132,59 @@ const FAQ = () => {
     };
 
     return (
-        <section className="w-full relative mb-20 overflow-visible">
+        <section className="w-full relative mt-10 mb-20 overflow-visible">
+            {/* Double line border - Top */}
+            <div
+                className="absolute left-0 right-0 top-0"
+                style={{
+                    height: '8px',
+                    borderTop: '1px solid #E5E5E5',
+                    borderBottom: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
+                }}
+            ></div>
+
             {/* Double line borders - Left */}
             <div
-                className="absolute left-8 top-0 bottom-0"
+                className="absolute md:left-8 left-0 top-0 bottom-0"
                 style={{
-                    width: '3px',
-                    borderLeft: '1px solid rgb(163 163 163)',
-                    borderRight: '1px solid rgb(163 163 163)',
+                    width: '8px',
+                    borderLeft: '1px solid #E5E5E5',
+                    borderRight: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
             {/* Double line borders - Right */}
             <div
-                className="absolute right-8 top-0 bottom-0"
+                className="absolute md:right-8 right-0 top-0 bottom-0"
                 style={{
-                    width: '3px',
-                    borderLeft: '1px solid rgb(163 163 163)',
-                    borderRight: '1px solid rgb(163 163 163)',
+                    width: '8px',
+                    borderLeft: '1px solid #E5E5E5',
+                    borderRight: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
             {/* Double line border - Bottom */}
             <div
-                className="absolute left-8 right-8 bottom-0"
+                className="absolute left-0 right-0 bottom-0"
                 style={{
-                    height: '3px',
-                    borderTop: '1px solid rgb(163 163 163)',
-                    borderBottom: '1px solid rgb(163 163 163)',
+                    height: '8px',
+                    borderTop: '1px solid #E5E5E5',
+                    borderBottom: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
-            <div ref={containerRef} className="p-2 md:p-6 lg:p-12 pl-20 pr-20 pb-20">
+            <div ref={containerRef} className="p-4 sm:p-6 md:p-8 lg:p-12 pl-4 sm:pl-6 md:pl-12 lg:pl-20 pr-4 sm:pr-6 md:pr-12 lg:pr-20 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
                 {/* Badge */}
                 <motion.div
-                    className="px-6 py-2 border border-neutral-300 border-dashed w-fit mb-3 md:mb-6 lg:mb-12"
+                    className="px-4 sm:px-6 py-2 border border-neutral-300 border-dashed w-fit mb-3 md:mb-6 lg:mb-12"
                     style={{
                         background:
                             "repeating-linear-gradient(135deg, #f9fafb 0px, #f9fafb 1px, transparent 1px, transparent 4px), white",
@@ -175,28 +193,29 @@ const FAQ = () => {
                     animate={containerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-2xl font-light text-text-primary font-clashdisplay">FAQ</h2>
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-light text-text-primary font-clashdisplay">FAQ</h2>
                 </motion.div>
 
                 {/* Main container - left side content, right side accordion */}
-                <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 overflow-visible">
+                <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 overflow-visible">
                     {/* Left side - Content */}
                     <div className="w-full md:w-1/2 lg:w-2/5">
                         {/* Heading */}
                         <motion.h3
                             ref={headingRef}
-                            className="text-xl md:text-2xl lg:text-4xl font-semibold text-neutral-800 font-generalsans mb-3 md:mb-4 lg:mb-6"
+                            className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-neutral-800 font-generalsans mb-3 md:mb-4 lg:mb-6 leading-tight"
                             initial={{ opacity: 0, y: 60 }}
                             animate={headingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
                             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
                         >
-                            <span className="text-neutral-500 text-shadow-sm">Frequently Asked Questions :</span> Everything You Need to Know
+                            <span className="text-neutral-500 text-shadow-sm block sm:inline">Frequently Asked Questions :</span>{" "}
+                            <span className="block sm:inline">Everything You Need to Know</span>
                         </motion.h3>
 
                         {/* Description */}
                         <motion.p
                             ref={subheadingRef}
-                            className="text-sm md:text-base lg:text-lg font-normal text-neutral-600 font-generalsans mb-6 md:mb-8 leading-relaxed"
+                            className="text-sm sm:text-base md:text-base lg:text-lg font-normal text-neutral-600 font-generalsans mb-6 md:mb-8 leading-relaxed text-left md:text-justify"
                             initial={{ opacity: 0, y: 40 }}
                             animate={subheadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
@@ -212,7 +231,7 @@ const FAQ = () => {
                         >
                             <button
                                 onClick={() => navigate("/contact-us")}
-                                className="bg-neutral-700 text-white px-6 py-3 rounded-md hover:bg-neutral-800 transition-all duration-300 font-generalsans font-medium text-base tracking-wide cursor-pointer inline-flex items-center gap-2"
+                                className="bg-neutral-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-neutral-800 transition-all duration-300 font-generalsans font-medium text-sm sm:text-base tracking-wide cursor-pointer inline-flex items-center gap-2 w-full sm:w-auto justify-center sm:justify-start"
                             >
                                 Any questions? Reach out
                                 <svg

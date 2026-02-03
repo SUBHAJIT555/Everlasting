@@ -53,9 +53,9 @@ const AccordionItem = ({
         >
             <button
                 onClick={onToggle}
-                className="w-full py-4 md:py-5 text-left flex items-center justify-between group  transition-colors duration-200 rounded-lg px-2 -mx-2 cursor-pointer group"
+                className="w-full py-3 sm:py-4 md:py-5 text-left flex items-center justify-between group transition-colors duration-200 rounded-lg px-2 -mx-2 cursor-pointer"
             >
-                <h4 className="text-base md:text-lg lg:text-xl font-semibold text-neutral-800 font-generalsans pr-4   group-hover:translate-x-2 transition-all duration-300">
+                <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-neutral-800 font-generalsans pr-4 group-hover:translate-x-2 transition-all duration-300">
                     {item.title}
                 </h4>
                 <motion.div
@@ -88,7 +88,7 @@ const AccordionItem = ({
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <p className="text-sm md:text-base text-neutral-600 font-generalsans leading-relaxed pb-4 md:pb-5 px-2">
+                        <p className="text-sm sm:text-base md:text-base text-neutral-600 font-generalsans leading-relaxed pb-4 md:pb-5 px-2">
                             {item.content}
                         </p>
                     </motion.div>
@@ -118,41 +118,59 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <section className="w-full relative overflow-visible">
+        <section className="w-full relative mt-10 overflow-visible">
+            {/* Double line border - Top */}
+            <div
+                className="absolute left-0 right-0 top-0"
+                style={{
+                    height: '8px',
+                    borderTop: '1px solid #E5E5E5',
+                    borderBottom: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
+                }}
+            ></div>
+
             {/* Double line borders - Left */}
             <div
-                className="absolute left-8 top-0 bottom-0"
+                className="absolute md:left-8 left-0 top-0 bottom-0"
                 style={{
-                    width: '3px',
-                    borderLeft: '1px solid rgb(163 163 163)',
-                    borderRight: '1px solid rgb(163 163 163)',
+                    width: '8px',
+                    borderLeft: '1px solid #E5E5E5',
+                    borderRight: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
             {/* Double line borders - Right */}
             <div
-                className="absolute right-8 top-0 bottom-0"
+                className="absolute md:right-8 right-0 top-0 bottom-0"
                 style={{
-                    width: '3px',
-                    borderLeft: '1px solid rgb(163 163 163)',
-                    borderRight: '1px solid rgb(163 163 163)',
+                    width: '8px',
+                    borderLeft: '1px solid #E5E5E5',
+                    borderRight: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
             {/* Double line border - Bottom */}
             <div
-                className="absolute left-8 right-8 bottom-0"
+                className="absolute left-0 right-0 bottom-0"
                 style={{
-                    height: '3px',
-                    borderTop: '1px solid rgb(163 163 163)',
-                    borderBottom: '1px solid rgb(163 163 163)',
+                    height: '8px',
+                    borderTop: '1px solid #E5E5E5',
+                    borderBottom: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
-            <div ref={containerRef} className="p-2 md:p-6 lg:p-12 pl-20 pr-20 pb-20">
+            <div ref={containerRef} className="p-4 sm:p-6 md:p-8 lg:p-12 pl-4 sm:pl-6 md:pl-12 lg:pl-20 pr-4 sm:pr-6 md:pr-12 lg:pr-20 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
                 {/* Badge */}
                 <motion.div
-                    className="px-6 py-2 border border-neutral-300 border-dashed w-fit mb-3 md:mb-6 lg:mb-12"
+                    className="px-4 sm:px-6 py-2 border border-neutral-300 border-dashed w-fit mb-3 md:mb-6 lg:mb-12"
                     style={{
                         background:
                             "repeating-linear-gradient(135deg, #f9fafb 0px, #f9fafb 1px, transparent 1px, transparent 4px), white",
@@ -161,28 +179,29 @@ const WhyChooseUs = () => {
                     animate={containerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-2xl font-light text-text-primary font-clashdisplay">Why Choose Us</h2>
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-light text-text-primary font-clashdisplay">Why Choose Us</h2>
                 </motion.div>
 
                 {/* Main container - left side accordion, right side image */}
-                <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 overflow-visible">
+                <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 overflow-visible">
                     {/* Left side - Accordion */}
                     <div className="w-full md:w-2/3">
                         {/* Heading */}
                         <motion.h3
                             ref={headingRef}
-                            className="text-xl md:text-2xl lg:text-4xl font-semibold text-neutral-800 font-generalsans mb-3 md:mb-4 lg:mb-6"
+                            className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-neutral-800 font-generalsans mb-3 md:mb-4 lg:mb-6 leading-tight"
                             initial={{ opacity: 0, y: 60 }}
                             animate={headingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
                             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
                         >
-                            <span className="text-neutral-500 text-shadow-sm">Why Clients Trust Us :</span> Your Partner for Excellence in Dubai & UAE
+                            <span className="text-neutral-500 text-shadow-sm block sm:inline">Why Clients Trust Us :</span>{" "}
+                            <span className="block sm:inline">Your Partner for Excellence in Dubai & UAE</span>
                         </motion.h3>
 
                         {/* Subheading */}
                         <motion.h5
                             ref={subheadingRef}
-                            className="text-lg md:text-xl lg:text-2xl font-normal text-neutral-600 font-generalsans mb-6 md:mb-8"
+                            className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-neutral-600 font-generalsans mb-6 md:mb-8"
                             initial={{ opacity: 0, y: 40, scale: 0.95 }}
                             animate={subheadingInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.95 }}
                             transition={{
@@ -215,7 +234,7 @@ const WhyChooseUs = () => {
                     {/* Right side - Image */}
                     <motion.div
                         ref={imageRef}
-                        className="w-full md:w-1/3  overflow-visible flex flex-col items-start justify-between gap-4"
+                        className="w-full md:w-1/3 overflow-visible flex flex-col items-start justify-between gap-4 sm:gap-6"
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={imageInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
                         transition={{
@@ -233,26 +252,26 @@ const WhyChooseUs = () => {
                             style={{ maxWidth: '100%', height: 'auto' }}
                         />
 
-                        <div className="flex flex-col items-start justify-between gap-4">
-                            <div>
-                                <div className="mb-2 border-b border-neutral-200 pb-2">
-                                    <p className="text-sm md:text-base lg:text-lg font-normal text-neutral-600 font-generalsans">Say Hi @</p>
-                                    <a href="mailto:info@everlastingtechnicalservices.com" className="text-text-primary font-generalsans font-medium text-base tracking-wide hover:text-blue-600 transition-all duration-300">everlastingtechnical@gmail.com</a>
+                        <div className="flex flex-col items-start justify-between gap-4 sm:gap-6 w-full">
+                            <div className="w-full">
+                                <div className="mb-3 sm:mb-4 border-b border-neutral-200 pb-2 sm:pb-3">
+                                    <p className="text-xs sm:text-sm md:text-base lg:text-lg font-normal text-neutral-600 font-generalsans mb-1">Say Hi @</p>
+                                    <a href="mailto:info@everlastingtechnicalservices.com" className="text-text-primary font-generalsans font-medium text-sm sm:text-base tracking-wide hover:text-blue-600 transition-all duration-300 wrap-break-words">everlastingtechnical@gmail.com</a>
                                 </div>
-                               
-                                <div className="mb-2 border-b border-neutral-200 pb-2">
-                                    <p className="text-sm md:text-base lg:text-lg font-normal text-neutral-600 font-generalsans">Say Hello @</p>
-                                    <a href="tel:+971561234567" className="text-text-primary font-generalsans font-medium text-base tracking-wide hover:text-blue-600 transition-all duration-300">+971 56 123 4567</a>
+
+                                <div className="mb-3 sm:mb-4 border-b border-neutral-200 pb-2 sm:pb-3">
+                                    <p className="text-xs sm:text-sm md:text-base lg:text-lg font-normal text-neutral-600 font-generalsans mb-1">Say Hello @</p>
+                                    <a href="tel:+971561234567" className="text-text-primary font-generalsans font-medium text-sm sm:text-base tracking-wide hover:text-blue-600 transition-all duration-300">+971 56 123 4567</a>
                                 </div>
-                                
+
                             </div>
                             {/* cta button */}
-                            <button className="bg-neutral-700 text-white px-4 py-2 rounded-md hover:bg-neutral-800 transition-all duration-300 font-generalsans font-medium text-base tracking-wide cursor-pointer">
+                            <button className="bg-neutral-700 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-md hover:bg-neutral-800 transition-all duration-300 font-generalsans font-medium text-sm sm:text-base tracking-wide cursor-pointer w-full sm:w-auto">
                                 <span>Contact Us Now</span>
                             </button>
 
                         </div>
-                        
+
                     </motion.div>
                 </div>
             </div>

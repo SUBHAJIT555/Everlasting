@@ -225,38 +225,56 @@ const ServicesHome = () => {
     const servicesInView = useInView(servicesRef, { once: false, amount: 0.1 });
 
     return (
-        <section className="w-full relative">
+        <section className="w-full relative mt-10">
+            {/* Double line border - Top */}
+            <div
+                className="absolute left-0 right-0 top-0"
+                style={{
+                    height: '8px',
+                    borderTop: '1px solid #E5E5E5',
+                    borderBottom: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
+                }}
+            ></div>
+
             {/* Double line borders - Left */}
             <div
-                className="absolute left-8 top-0 bottom-0"
+                className="absolute md:left-8 left-0 top-0 bottom-0"
                 style={{
-                    width: '3px',
-                    borderLeft: '1px solid rgb(163 163 163)',
-                    borderRight: '1px solid rgb(163 163 163)',
+                    width: '8px',
+                    borderLeft: '1px solid #E5E5E5',
+                    borderRight: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
             {/* Double line borders - Right */}
             <div
-                className="absolute right-8 top-0 bottom-0"
+                className="absolute md:right-8 right-0 top-0 bottom-0"
                 style={{
-                    width: '3px',
-                    borderLeft: '1px solid rgb(163 163 163)',
-                    borderRight: '1px solid rgb(163 163 163)',
+                    width: '8px',
+                    borderLeft: '1px solid #E5E5E5',
+                    borderRight: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
             {/* Double line border - Bottom */}
             <div
-                className="absolute left-8 right-8 bottom-0"
+                className="absolute left-0 right-0 bottom-0"
                 style={{
-                    height: '3px',
-                    borderTop: '1px solid rgb(163 163 163)',
-                    borderBottom: '1px solid rgb(163 163 163)',
+                    height: '8px',
+                    borderTop: '1px solid #E5E5E5',
+                    borderBottom: '1px solid #E5E5E5',
+                    background:
+                        "repeating-linear-gradient(135deg, #E5E5E5 0px, #E5E5E5 1px, transparent 1px, transparent 4px), white",
                 }}
             ></div>
 
-            <div ref={containerRef} className="p-2 md:p-6 lg:p-12 pl-20 pr-20 pb-20">
+            <div ref={containerRef} className="p-4 sm:p-6 md:p-8 lg:p-12 pl-4 sm:pl-6 md:pl-12 lg:pl-20 pr-4 sm:pr-6 md:pr-12 lg:pr-20 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
                 {/* Badge */}
                 <motion.div
                     className="px-6 py-2 border border-neutral-300 border-dashed w-fit mb-3 md:mb-6 lg:mb-12"

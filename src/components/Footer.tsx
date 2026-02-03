@@ -120,6 +120,104 @@ const Footer = () => {
              
             </div>
 
+              {/* Services */}
+
+              <div className="col-span-2 sm:col-span-1 lg:col-span-2 border-b lg:border-b-0 border-neutral-300 border-dashed pb-8 lg:pb-0 pr-5 lg:pr-8 pl-2">
+                <h3 className="text-primary text-xl md:text-2xl font-generalsans tracking-tighter font-medium mb-5 ">
+                  Services
+                </h3>
+                <ul className="text-text-primary text-sm md:text-xl font-generalsans mt-2">
+                  <li>
+                    <Link
+                      to="/services/hv-ac-electrical"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        HV A.C., Electrical
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/carpentry"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Carpentry
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/data-cctv"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Data & CCTV
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/plumbing"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Plumbing
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/sanitary-paint"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Sanitary, Paint
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/kitchen-equipment"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Kitchen equipment
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/villa-renovation"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Villa Renovation
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services/annual-maintanance"
+                      className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
+                    >
+                      <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                        Annual Maintanance
+                      </span>
+                      <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
             {/* Useful Links */}
 
             <div className="col-span-2 sm:col-span-1 lg:col-span-2 border-b lg:border-b-0 border-neutral-300 border-dashed pb-8 lg:pb-0 pr-5 lg:pr-8 pl-2">
@@ -160,7 +258,7 @@ const Footer = () => {
                     className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                   >
                     <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Programs
+                      Services
                     </span>
                     <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
                     ></span>
@@ -173,7 +271,7 @@ const Footer = () => {
                     className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                   >
                     <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Simulator
+                      Contact
                     </span>
                     <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
                     ></span>
@@ -181,16 +279,15 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <Link
-                    to="/contact"
+                  <a
+                    href="mailto:support@example.com"
                     className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                   >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Contact
+                    <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
+                      Support
                     </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </Link>
+                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -241,104 +338,11 @@ const Footer = () => {
                     ></span>
                   </Link>
                 </li>
-
-                <li>
-                  <Link
-                    to="/refund-policy"
-                    className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
-                  >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Refund Policy
-                    </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to="mailto:info@leadingnetworkllc.com"
-                    className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
-                  >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Support
-                    </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </Link>
-                </li>
+               
               </ul>
             </div>
 
-            {/* Socials */}
-
-            <div className="col-span-2 sm:col-span-1 lg:col-span-2 border-b lg:border-b-0 border-neutral-300 border-dashed pb-8 lg:pb-0 pr-5 lg:pr-8 pl-2">
-              <h3 className="text-primary text-xl md:text-2xl font-generalsans tracking-tighter font-medium mb-5 ">
-                Socials
-              </h3>
-
-              <ul className="text-text-primary text-sm md:text-xl font-generalsans mt-2">
-                <li>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
-                  >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Instagram
-                    </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
-                  >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      Facebook
-                    </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
-                  >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      LinkedIn
-                    </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://wa.me/919876543210"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
-                  >
-                    <span className="relative z-10 transition-colors duration-500 ease-out  flex items-center">
-                      WhatsApp
-                    </span>
-                    <span className="absolute left-0 top-0 bottom-0 right-0 bg-neutral-300 border border-neutral-400 border-dashed scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"
-                    ></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+           
 
             {/* Newsletter */}
 
