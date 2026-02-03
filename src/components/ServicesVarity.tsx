@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Services data with SVG paths, descriptions, and images
 const services = [
     {
+        id: "hv-ac-and-electrical",
         name: "HV A.C. , Electrical",
         description: "Our comprehensive HVAC and electrical services cover everything from initial design consultation to complete installation and ongoing maintenance. We specialize in energy-efficient air conditioning systems, including split units, central air systems, and VRF systems for commercial applications. Our certified electrical team handles everything from basic wiring and panel upgrades to complete electrical rewiring, smart home automation, and emergency electrical repairs. We ensure all installations comply with Dubai Municipality regulations and international safety standards, providing you with reliable, efficient, and safe systems that reduce energy consumption and operational costs.",
         image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop",
@@ -18,6 +20,7 @@ const services = [
         ],
     },
     {
+        id: "carpentry",
         name: "Carpentry",
         description: "Transform your spaces with our expert carpentry and custom fit-out services. We specialize in bespoke furniture design, custom kitchen cabinets, built-in wardrobes, and precision joinery work. Our skilled craftsmen work with premium materials including solid wood, engineered wood, and high-quality laminates to create functional and aesthetically pleasing solutions. From concept to completion, we handle everything including detailed measurements, 3D design visualization, material selection, and professional installation. Whether it's residential interiors, commercial office fit-outs, or specialized carpentry projects, we deliver exceptional craftsmanship that combines traditional techniques with modern design sensibilities.",
         image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
@@ -26,6 +29,7 @@ const services = [
         ],
     },
     {
+        id: "data-cctv",
         name: "Data & CCTV",
         description: "Keep your property secure and connected with our comprehensive data cabling and CCTV security solutions. We provide structured cabling systems for data networks, including Cat6 and Cat6a installations, fiber optic cabling, and network infrastructure setup for homes and businesses. Our CCTV services include HD and 4K camera installations, NVR systems, remote monitoring capabilities, and mobile app integration for real-time surveillance. We design and install complete security systems including access control, alarm systems, and intercom solutions. Our team ensures proper cable management, optimal camera placement for maximum coverage, and seamless integration with existing security infrastructure, providing you with peace of mind and enhanced protection.",
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
@@ -37,6 +41,7 @@ const services = [
         ],
     },
     {
+        id: "plumbing",
         name: "Plumbing",
         description: "Our professional plumbing services encompass the complete spectrum of water supply, drainage, and plumbing solutions. We handle new installations, repairs, and maintenance for residential, commercial, and industrial properties. Our services include hot and cold water supply systems, sewage and drainage installations, water heater setup and maintenance, pipe repairs and replacements, leak detection and fixing, bathroom and kitchen plumbing installations, and emergency plumbing services available 24/7. We use high-quality materials and modern techniques to ensure leak-free, efficient systems that meet Dubai's water and sanitation standards. Our certified plumbers are equipped with advanced tools for precise diagnostics and efficient repairs, minimizing disruption to your daily operations.",
         image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
@@ -47,6 +52,7 @@ const services = [
         ],
     },
     {
+        id: "sanitary-paint",
         name: "Sanitary, Paint",
         description: "Elevate your spaces with our professional painting, finishing, and sanitary solutions. Our painting services include interior and exterior painting, decorative finishes, texture applications, and protective coatings. We work with premium paints and finishes suitable for Dubai's climate, ensuring durability and resistance to heat and humidity. Our sanitary solutions cover complete bathroom installations, including fixtures, fittings, tiles, and accessories. We provide expert tiling work, grouting, waterproofing, and bathroom renovation services. Our team ensures proper surface preparation, precise application techniques, and clean finishes that enhance the aesthetic appeal and value of your property. We use eco-friendly materials and follow best practices for indoor air quality and environmental safety.",
         image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
@@ -57,6 +63,7 @@ const services = [
         ],
     },
     {
+        id: "kitchen-equipment",
         name: "Kitchen Equipment",
         description: "Create functional and beautiful kitchens with our complete kitchen equipment installation and setup services. We handle everything from kitchen design consultation to full installation of appliances, cabinets, countertops, and fixtures. Our services include installation of cooking equipment, refrigeration units, dishwashers, exhaust systems, and water filtration systems. We work with leading brands and ensure proper electrical and plumbing connections, ventilation requirements, and safety compliance. Our team provides detailed planning, precise measurements, and professional installation that maximizes kitchen efficiency and functionality. We also offer kitchen renovation services, including cabinet refacing, countertop replacement, and complete kitchen makeovers tailored to your lifestyle and preferences.",
         image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop",
@@ -67,6 +74,7 @@ const services = [
         ],
     },
     {
+        id: "villa-renovation",
         name: "Villa Renovation",
         description: "Transform your villa into a modern masterpiece with our comprehensive renovation services. We provide end-to-end villa renovation solutions covering all aspects of home improvement, from initial design consultation to final finishing touches. Our services include structural modifications, complete interior and exterior renovations, flooring and ceiling work, wall treatments, lighting design and installation, and landscaping. We handle villa expansions, room additions, and complete makeovers while ensuring compliance with local building regulations. Our team coordinates all trades including MEP, carpentry, painting, and finishing work, ensuring seamless execution and timely completion. We work closely with you to understand your vision, provide detailed project plans, and deliver exceptional results that enhance both the functionality and aesthetic appeal of your villa.",
         image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
@@ -78,6 +86,7 @@ const services = [
         ],
     },
     {
+        id: "annual-maintenance",
         name: "Annual Maintenance",
         description: "Ensure optimal performance and longevity of your building systems with our comprehensive Annual Maintenance Contracts (AMC). Our AMC services cover all MEP systems including HVAC, electrical, plumbing, and fire safety systems. We provide scheduled preventive maintenance visits, emergency response services, system inspections, cleaning and servicing, parts replacement, and detailed maintenance reports. Our maintenance programs are designed to prevent breakdowns, reduce energy consumption, extend equipment lifespan, and ensure compliance with safety regulations. We offer flexible contract options tailored to your needs, from basic maintenance to comprehensive coverage including 24/7 emergency support. Our certified technicians use advanced diagnostic tools and follow manufacturer guidelines to keep your systems running efficiently, saving you time, money, and ensuring uninterrupted operations throughout the year.",
         image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
@@ -133,6 +142,7 @@ const ServiceIcon = ({ paths, isInView }: { paths: string[]; isInView: boolean }
 
 // Parallax Services Component
 type ServiceType = {
+    id: string;
     name: string;
     description: string;
     image: string;
@@ -140,6 +150,7 @@ type ServiceType = {
 };
 
 const ParallaxServices = ({ services }: { services: ServiceType[] }) => {
+    const navigate = useNavigate();
     const sectionRef0 = useRef<HTMLDivElement>(null);
     const sectionRef1 = useRef<HTMLDivElement>(null);
     const sectionRef2 = useRef<HTMLDivElement>(null);
@@ -228,6 +239,7 @@ const ParallaxServices = ({ services }: { services: ServiceType[] }) => {
             {services.map((service: ServiceType, index: number) => (
                 <div
                     key={index}
+                    id={service.id}
                     ref={sectionRefs[index]}
                     className={`min-h-screen flex flex-col md:flex-row items-center justify-center md:gap-16 lg:gap-20 gap-8 py-12 sm:py-16 md:py-24 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
                 >
@@ -268,20 +280,22 @@ const ParallaxServices = ({ services }: { services: ServiceType[] }) => {
                         {/* Explore Button - Mobile Only (after image) */}
                         <motion.button
                             className="w-fit px-6 sm:px-8 py-3 sm:py-3.5 bg-neutral-700 text-white rounded-md font-medium text-sm sm:text-base font-generalsans hover:bg-neutral-800 transition-all duration-300 flex items-center justify-center gap-2 group/button md:hidden"
-                            whileHover={{ scale: 1.05 }}
+
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => navigate("/contact-us")}
                         >
-                            Explore
+                            Contact Us Now
                             <ArrowRight className="w-4 h-4 group-hover/button:translate-x-1 transition-transform" />
                         </motion.button>
 
                         {/* Explore Button - Desktop Only */}
                         <motion.button
                             className="hidden md:flex w-fit px-6 sm:px-8 py-3 sm:py-3.5 bg-neutral-700 text-white rounded-md font-medium text-sm sm:text-base font-generalsans hover:bg-neutral-800 transition-all duration-300 items-center justify-center gap-2 group/button"
-                            whileHover={{ scale: 1.05 }}
+
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => navigate("/contact-us")}
                         >
-                            Explore
+                            Contact Us Now
                             <ArrowRight className="w-4 h-4 group-hover/button:translate-x-1 transition-transform" />
                         </motion.button>
                     </motion.div>

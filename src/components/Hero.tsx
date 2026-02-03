@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import { motion, useMotionValue, animate, useInView, useScroll, useTransform } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import heroBgImage from "@/assets/images/Home/herosectionbg.svg";
+// import heroBgImage from "@/assets/images/Home/herosectionbg.svg";
 
 // Animated SVG Icon Component
 const AnimatedIcon = ({ paths, isInView, baseDelay = 0 }: { paths: string[]; isInView: boolean; baseDelay?: number }) => {
@@ -204,18 +204,15 @@ const Hero = () => {
     >
       {/* Background Image - Parallax (moves slower/stays) */}
       <motion.div
-        className="absolute inset-0 opacity-10 lg:opacity-30 flex items-center justify-center pointer-events-none overflow-visible"
+        className="absolute inset-0  flex items-center justify-center pointer-events-none overflow-visible"
         style={{ y: backgroundY }}
       >
-        <img
-          src={heroBgImage}
-          alt=""
+        <video
+          src="https://www.pexels.com/download/video/32766251/"
+          autoPlay
+          muted
+          loop
           className="object-contain drop-shadow-2xl"
-          style={{
-            width: '80%',
-            height: '80%',
-            objectFit: 'contain',
-          }}
         />
       </motion.div>
 
@@ -256,15 +253,15 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6 max-w-4xl"
             >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-clashdisplay font-light leading-[1.1] text-neutral-900">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-clashdisplay font-light leading-[1.1] text-white">
                 Everlasting
                 <br />
-                <span className="font-light text-neutral-600">
+                <span className="font-light text-neutral-100">
                   Technical Services
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl text-text-primary font-generalsans font-normal max-w-2xl mx-auto ">
+              <p className="text-lg sm:text-xl md:text-2xl text-white text-shadow-lg font-generalsans font-normal max-w-2xl mx-auto ">
                 Professional maintenance and renovation solutions across Dubai & UAE.
                 Delivering excellence through certified technicians and proven expertise.
               </p>
@@ -310,11 +307,11 @@ const Hero = () => {
               <motion.button
                 onClick={handleContactClick}
                 whileTap={{ scale: 0.95 }}
-                className="relative px-8 py-3 bg-white/5 backdrop-blur-sm border border-neutral-300 border-dashed text-neutral-900 font-generalsans font-medium text-base rounded-md overflow-hidden transition-all duration-300 shadow-md flex items-center gap-2 group cursor-pointer"
+                className="relative px-8 py-3 bg-white/5 backdrop-blur-sm border border-neutral-300 border-dashed text-white font-generalsans font-medium text-base rounded-md overflow-hidden transition-all duration-300 shadow-md flex items-center gap-2 group cursor-pointer"
               >
                 <motion.span
-                  className="relative z-10 text-text-primary font-clashdisplay font-medium text-base tracking-wide"
-                  initial={{ color: "#171717" }}
+                  className="relative z-10 text-white font-clashdisplay font-medium text-base tracking-wide"
+                  initial={{ color: "#ffffff" }}
                   transition={{ duration: 0.3 }}
                 >
                   Contact Us

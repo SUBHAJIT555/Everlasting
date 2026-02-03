@@ -129,7 +129,7 @@ const Footer = () => {
                 <ul className="text-text-primary text-sm md:text-xl font-generalsans mt-2">
                   <li>
                     <Link
-                      to="/services/hv-ac-electrical"
+                      to="/services#hv-ac-and-electrical"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -140,7 +140,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/carpentry"
+                      to="/services#carpentry"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -151,7 +151,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/data-cctv"
+                      to="/services#data-cctv"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -162,7 +162,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/plumbing"
+                      to="/services#plumbing"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -173,7 +173,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/sanitary-paint"
+                      to="/services#sanitary-paint"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -184,7 +184,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/kitchen-equipment"
+                      to="/services#kitchen-equipment"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -195,7 +195,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/villa-renovation"
+                      to="/services#villa-renovation"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">
@@ -206,7 +206,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="/services/annual-maintanance"
+                      to="/services#annual-maintanance"
                       className="relative inline-block pl-1 pr-5 text-text-primary text-sm md:text-xl font-generalsans group overflow-hidden"
                     >
                       <span className="relative z-10 transition-colors duration-500 ease-out flex items-center">

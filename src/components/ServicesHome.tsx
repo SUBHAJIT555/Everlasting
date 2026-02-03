@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 // Services data with SVG paths and descriptions
 const services = [
     {
+        id: "hv-ac-and-electrical",
         name: "HV A.C. , Electrical",
         description: "Expert HVAC and electrical solutions for residential and commercial projects. From installation to maintenance, ensuring efficiency and safety.",
         paths: [
@@ -18,6 +19,7 @@ const services = [
         ],
     },
     {
+        id: "carpentry",
         name: "Carpentry",
         description: "Bespoke carpentry solutions and custom fit-outs. Precision craftsmanship with premium materials tailored to your needs.",
         paths: [
@@ -25,6 +27,7 @@ const services = [
         ],
     },
     {
+        id: "data-cctv",
         name: "Data & CCTV",
         description: "Structured cabling, CCTV installations, and security solutions. Keeping your property secure and connected.",
         paths: [
@@ -35,6 +38,7 @@ const services = [
         ],
     },
     {
+        id: "plumbing",
         name: "Plumbing",
         description: "Professional plumbing services covering pipe installations, repairs, and maintenance. Leak-free systems for every project.",
         paths: [
@@ -44,6 +48,7 @@ const services = [
         ],
     },
     {
+        id: "sanitary-paint",
         name: "Sanitary, Paint",
         description: "Professional painting, finishing, and sanitary solutions. Premium materials for residential and commercial projects.",
         paths: [
@@ -53,6 +58,7 @@ const services = [
         ],
     },
     {
+        id: "kitchen-equipment",
         name: "Kitchen Equipment",
         description: "Complete kitchen equipment installation and setup. Functional design with premium appliances and fixtures.",
         paths: [
@@ -62,6 +68,7 @@ const services = [
         ],
     },
     {
+        id: "villa-renovation",
         name: "Villa Renovation",
         description: "Full-scale villa renovation services. Transforming spaces with expert design, quality materials, and meticulous execution.",
         paths: [
@@ -72,6 +79,7 @@ const services = [
         ],
     },
     {
+        id: "annual-maintenance",
         name: "Annual Maintenance",
         description: "Comprehensive annual maintenance contracts (AMC) to ensure your building's systems operate seamlessly year-round.",
         paths: [
@@ -127,12 +135,14 @@ const ServiceIcon = ({ paths, isInView }: { paths: string[]; isInView: boolean }
 };
 
 const ServiceCard = ({
+    id,
     title,
     description,
     paths,
     index,
     isInView,
 }: {
+    id: string;
     title: string;
     description: string;
     paths: string[];
@@ -140,6 +150,17 @@ const ServiceCard = ({
     isInView: boolean;
 }) => {
     const navigate = useNavigate();
+
+    const handleKnowMore = () => {
+        navigate(`/services#${id}`);
+        // Scroll to the element after navigation
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+    };
 
     return (
         <motion.div
@@ -186,7 +207,7 @@ const ServiceCard = ({
             {/* Know More Button */}
             <div className="px-10 relative z-10">
                 <button
-                    onClick={() => navigate("/services")}
+                    onClick={handleKnowMore}
                     className="text-sm font-medium text-neutral-700 group-hover/service:text-blue-600 group-hover/service:translate-x-2 transition-all duration-200 inline-flex items-center gap-2 font-generalsans"
                 >
                     Know More
@@ -334,6 +355,7 @@ const ServicesHome = () => {
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}
+                            id={service.id}
                             title={service.name}
                             description={service.description}
                             paths={service.paths}
