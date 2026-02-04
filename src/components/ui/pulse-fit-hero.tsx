@@ -78,7 +78,7 @@ export function PulseFitHero({
           x={0}
           y={0}
           strokeDasharray="1"
-          className="stroke-neutral-300/20 fill-none absolute inset-0 h-full w-full"
+          className="stroke-neutral-300/40 fill-none absolute inset-0 h-full w-full"
         />
       </div>
 

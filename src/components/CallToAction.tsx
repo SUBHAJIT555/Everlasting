@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import useLeadCaptureModalContext from "@/hooks/useLeadCaptureModalContext";
+import { useCallbackModalStore } from "@/components/store/callbackModalStore";
 
 const CallToAction = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
-    const { openModal } = useLeadCaptureModalContext();
+    const openCallbackModal = useCallbackModalStore((state) => state.openModal);
 
     const containerInView = useInView(containerRef, { once: false, amount: 0.1 });
     const contentInView = useInView(contentRef, { once: false, amount: 0.1 });
@@ -128,7 +128,7 @@ const CallToAction = () => {
                             Contact Us
                         </button>
                         <button
-                            onClick={() => openModal("marketing")}
+                            onClick={() => openCallbackModal()}
                             className="w-full sm:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 bg-neutral-700 text-white font-generalsans font-medium text-sm sm:text-base rounded-md hover:bg-neutral-800 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
                         >
                             Request Call Back
