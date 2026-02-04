@@ -19,7 +19,7 @@ const BreadCrumb = ({ items, className = "" }: BreadcrumbProps) => {
 
     return (
         <nav
-            className={`inline-flex mt-20 mb-10 items-center gap-2 px-4 py-2 bg-white  ${className}`}
+            className={`inline-flex items-center gap-2 px-4 py-2 ${className}`}
             aria-label="Breadcrumb"
         >
             {/* Home Icon */}
