@@ -31,7 +31,7 @@ const AnimatedIcon = ({ paths, isInView, baseDelay = 0 }: { paths: string[]; isI
           <motion.path
             key={idx}
             d={path}
-            stroke="blue"
+            stroke="currentColor"
             strokeWidth="1"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -346,7 +346,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Marquee Section */}
-      <div ref={marqueeInViewRef} className="relative w-full border-t border-neutral-200 bg-white/50 backdrop-blur-sm py-8 overflow-hidden">
+      <div ref={marqueeInViewRef} className="relative w-full border-t border-neutral-100 border-dashed bg-transparent backdrop-blur-sm py-8 overflow-hidden">
         <div ref={marqueeRef} className="relative w-full overflow-hidden">
           {/* Left Shader/Blur Effect */}
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
