@@ -17,7 +17,10 @@ const ContactHero = () => {
     const buttonsInView = useInView(buttonsRef, { once: false, amount: 0.1 });
 
     return (
-        <section className="w-full relative mt-10 min-h-[80vh] flex items-center justify-center">
+        <section className="w-full relative mt-10 min-h-[80vh] flex items-center justify-center"
+        style={{
+            background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #475569 100%)",
+        }}>
             {/* Grid Pattern Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <GridPattern

@@ -1,23 +1,11 @@
-import { useNavigate } from "react-router-dom";
+
 import { PulseFitHero } from "@/components/ui/pulse-fit-hero";
 
 export default function AboutHero() {
-    const navigate = useNavigate();
 
     return (
         <PulseFitHero
-            logo="PulseFit"
-            navigation={[
-                { label: "Features", onClick: () => console.log("Features") },
-                { label: "Programs", hasDropdown: true, onClick: () => console.log("Programs") },
-                { label: "Testimonials", onClick: () => console.log("Testimonials") },
-                { label: "Pricing", onClick: () => console.log("Pricing") },
-                { label: "Contact", onClick: () => navigate("/contact-us") },
-            ]}
-            ctaButton={{
-                label: "Get Free Trial",
-                onClick: () => console.log("Get Free Trial"),
-            }}
+            
             title="Who We Are & What We Stand For"
             subtitle="Your trusted partner for MEP solutions, maintenance, and renovation across Dubai & UAE. We deliver excellence through certified technicians and a commitment to quality."
             primaryAction={{
@@ -28,7 +16,7 @@ export default function AboutHero() {
                 label: "Our Services",
                 onClick: () => console.log("Our Services"),
             }}
-            disclaimer="*Certified & trusted technicians with 24/7 support"
+            disclaimer="* Certified & trusted technicians with 24/7 support."
             socialProof={{
                 avatars: [
                     "https://i.pravatar.cc/150?img=1",
@@ -36,7 +24,7 @@ export default function AboutHero() {
                     "https://i.pravatar.cc/150?img=3",
                     "https://i.pravatar.cc/150?img=4",
                 ],
-                text: "Trusted by 1000+ customers",
+                text: "Trusted by 1000+ customers.",
             }}
             programs={[
                 {
@@ -64,7 +52,7 @@ export default function AboutHero() {
                     onClick: () => console.log("Plumbing"),
                 },
                 {
-                    image:"https://images.pexels.com/photos/7217924/pexels-photo-7217924.jpeg",
+                    image: "https://images.pexels.com/photos/7217924/pexels-photo-7217924.jpeg",
                     category: "Sanitary, Paint",
                     title: "Professional Sanitary & Paint Solutions",
                     onClick: () => console.log("Sanitary, Paint"),

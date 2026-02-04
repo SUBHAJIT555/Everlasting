@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { GridPattern } from "./grid-pattern";
 
 export interface NavigationItem {
   label: string;
@@ -59,12 +60,28 @@ export function PulseFitHero({
   return (
     <section
       className={cn(
-        "relative w-full min-h-screen flex flex-col overflow-hidden mt-20 md:mt-30 lg:mt-36",
+        "relative w-full min-h-screen flex flex-col overflow-hidden pt-20 md:pt-30 lg:pt-36",
         className
       )}
       role="banner"
       aria-label="Hero section"
+      style={{
+        background: "radial-gradient(125% 125% at 50% 90%, #fff 40%, #475569 100%)",
+      }}
+
     >
+
+      {/* Grid Pattern Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <GridPattern
+          width={20}
+          height={20}
+          x={0}
+          y={0}
+          strokeDasharray="1"
+          className="stroke-neutral-300/20 fill-none absolute inset-0 h-full w-full"
+        />
+      </div>
 
 
       {/* Main Content */}
@@ -149,7 +166,7 @@ export function PulseFitHero({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="font-generalsans text-[13px] font-normal text-neutral-500 italic"
+                className="font-generalsans text-[13px] tracking-wide font-normal text-neutral-500 italic"
               >
                 {disclaimer}
               </motion.p>
@@ -168,7 +185,7 @@ export function PulseFitHero({
                       key={index}
                       src={avatar}
                       alt=""
-                      className="rounded-full border-2 border-white w-10 h-10 object-cover"
+                      className="rounded-full border-2 border-white w-10 h-10 object-cover ring-1 ring-offset-white ring-neutral-300 shadow-md"
                     />
                   ))}
                 </div>
@@ -190,11 +207,11 @@ export function PulseFitHero({
           className="relative z-10 w-full overflow-hidden pt-14 pb-14"
         >
           <div
-            className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none w-[150px] bg-[linear-gradient(90deg,#fff_0%,rgba(255,255,255,0)_100%)]"
+            className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none w-[150px] "
             aria-hidden
           />
           <div
-            className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none w-[150px] bg-[linear-gradient(270deg,#fff_0%,rgba(255,255,255,0)_100%)]"
+            className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none w-[150px] "
             aria-hidden
           />
 
@@ -215,22 +232,21 @@ export function PulseFitHero({
             {[...programs, ...programs].map((program, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 onClick={program.onClick}
-                className="shrink-0 cursor-pointer relative overflow-hidden border border-neutral-200 p-2 w-[356px] h-[480px] rounded-md shadow-xl"
+                className="shrink-0 cursor-pointer relative overflow-hidden  p-2 w-[356px] h-[480px]  shadow-xl"
               >
                 <img
                   src={program.image}
                   alt=""
-                  className="w-full h-full object-cover rounded-md"
+                  className="w-full h-full object-cover"
                 />
                 {/* Dither / stipple overlay for vintage print effect */}
                 <div
                   className="absolute inset-0 opacity-[0.14] mix-blend-multiply pointer-events-none"
                   style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='0.6' fill='%23000'/%3E%3Ccircle cx='7' cy='1' r='0.6' fill='%23000'/%3E%3Ccircle cx='1' cy='7' r='0.6' fill='%23000'/%3E%3Ccircle cx='7' cy='7' r='0.6' fill='%23000'/%3E%3Ccircle cx='4' cy='4' r='0.5' fill='%23000'/%3E%3C/svg%3E")`,
-                    backgroundSize: "12px 12px",
+                    backgroundSize: "2px 2px",
                   }}
                   aria-hidden
                 />
