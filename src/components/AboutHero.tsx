@@ -1,7 +1,10 @@
 
 import { PulseFitHero } from "@/components/ui/pulse-fit-hero";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutHero() {
+
+    const navigate = useNavigate();
 
     return (
         <PulseFitHero
@@ -10,11 +13,11 @@ export default function AboutHero() {
             subtitle="Your trusted partner for MEP solutions, maintenance, and renovation across Dubai & UAE. We deliver excellence through certified technicians and a commitment to quality."
             primaryAction={{
                 label: "Connect with us",
-                onClick: () => console.log("Start training"),
+                onClick: () => navigate("/contact-us"),
             }}
             secondaryAction={{
                 label: "Our Services",
-                onClick: () => console.log("Our Services"),
+                onClick: () => navigate("/services"),
             }}
             disclaimer="* Certified & trusted technicians with 24/7 support."
             socialProof={{

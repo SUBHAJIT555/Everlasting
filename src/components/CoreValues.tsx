@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 const values = [
   {
     title: "Excellence",
-    description: "We deliver superior quality in every project, ensuring the highest standards of workmanship and materials.",
+    description: "We deliver superior quality in every project, ensuring the highest standards of workmanship and premium materials.",
     icon: "award",
     paths: [
       "M6 9a6 6 0 1 0 12 0a6 6 0 1 0 -12 0",
@@ -14,7 +14,7 @@ const values = [
   },
   {
     title: "Reliability",
-    description: "24/7 emergency support and dependable service when you need it most.",
+    description: "24/7 emergency support and dependable service when you need it most. Certified technicians ready to assist across Dubai & UAE.",
     icon: "clock",
     paths: [
       "M3 12a9 9 0 0 0 5.998 8.485m12.002 -8.485a9 9 0 1 0 -18 0",
@@ -26,7 +26,7 @@ const values = [
   },
   {
     title: "Innovation",
-    description: "Staying ahead with the latest technologies and best practices in technical services.",
+    description: "Staying ahead with the latest MEP technologies, best practices, and compliance with Dubai Municipality regulations.",
     icon: "bulb",
     paths: [
       "M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7",
@@ -36,7 +36,7 @@ const values = [
   },
   {
     title: "Integrity",
-    description: "Transparent communication, honest pricing, and ethical business practices.",
+    description: "Transparent communication, honest pricing, and ethical business practices. Your trusted partner for technical solutions.",
     icon: "scale",
     paths: [
       "M7 20l10 0",
@@ -51,7 +51,7 @@ const values = [
 // Animated SVG Icon Component
 const ValueIcon = ({ paths, isInView }: { paths: string[]; isInView: boolean }) => {
   return (
-    <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center text-neutral-700 mb-4 transition-colors duration-300">
+    <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center text-neutral-700 mb-4 transition-colors duration-300 bg-white border border-neutral-100 border-dashed p-1 shadow-sm">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="64"
@@ -69,7 +69,7 @@ const ValueIcon = ({ paths, isInView }: { paths: string[]; isInView: boolean }) 
             key={idx}
             d={path}
             stroke="currentColor"
-            strokeWidth="1.5"
+            strokeWidth="1"
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
@@ -173,7 +173,7 @@ const CoreValues = () => {
           animate={headingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          The principles that guide everything we do
+          The principles that guide everything we do.
         </motion.h3>
 
         {/* Description */}
@@ -192,7 +192,7 @@ const CoreValues = () => {
           {values.map((value, index) => (
             <motion.div
               key={index}
-              className="p-4 sm:p-6 bg-white border border-neutral-300 border-dashed rounded hover:shadow-md transition-all duration-300 group/value"
+              className="p-4 sm:p-6 bg-white border border-neutral-200 border-dashed  transition-all duration-300 group/value"
               initial={{ opacity: 0, y: 40 }}
               animate={valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.6, delay: 0.1 * index, ease: "easeOut" }}
@@ -204,7 +204,7 @@ const CoreValues = () => {
               {/* Icon */}
               <ValueIcon paths={value.paths} isInView={valuesInView} />
 
-              <h4 className="text-base sm:text-lg md:text-xl font-semibold text-neutral-800 font-generalsans mb-2">
+              <h4 className="text-base sm:text-lg md:text-xl font-medium tracking-wide text-neutral-800 font-generalsans mb-2">
                 {value.title}
               </h4>
               <p className="text-sm sm:text-base md:text-base text-neutral-600 font-generalsans leading-relaxed">

@@ -117,8 +117,6 @@
   font-display: swap;
 }
 
-
-
 @layer base {
   :root {
     /* Color Palette */
@@ -137,6 +135,10 @@
 
 body {
   background-color: var(--background);
+  ::selection {
+    background-color: lawngreen;
+    color: black;
+  }
 }
 
 /* Native smooth scrolling disabled; Lenis handles scroll smoothing */

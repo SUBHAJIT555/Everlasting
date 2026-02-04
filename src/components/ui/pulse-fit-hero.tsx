@@ -70,7 +70,6 @@ export function PulseFitHero({
       }}
 
     >
-
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <GridPattern
